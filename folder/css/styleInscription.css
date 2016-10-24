@@ -1,0 +1,111 @@
+#nouveauClient{
+	width: 1225px;
+	z-index: 1;
+}
+#nouveauClient h3{
+	color: midnightblue;
+	text-align: center;
+	margin-bottom: 60px;
+	margin-top: 40px;
+}
+#nouveauClient h4{
+	color: #e65100;
+	opacity: 0.8;
+	text-align: center;
+	padding-bottom: 10px;
+}
+#commandeSMS{
+	position: absolute;
+	margin-top: 80px;
+	margin-left: -40px;
+	vertical-align: top;
+	color: midnightblue;
+	font-weight: bold;
+	font-size: 42px;
+	display: inline-block;
+	width: 210px;
+}
+#pictoBasPage{
+	background-image: url('../images/BODY/ESPACE CLIENT/bas de page pictos.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 1225px;
+	height: 430px;
+	padding-top: 69px;
+	padding-left: 280px;
+}
+#formulaireNouveauClient{
+	margin-bottom: 60px;
+}
+#formulaireNouveauClient input{
+	background-color: #C9C9C9;
+	border-radius: 5px;
+}
+#formulaireNouveauClient .input-field label {
+	color: midnightblue;
+	padding-bottom: 5px;
+	font-size: 16px;
+	margin-left: 5px;
+}
+#formulaireNouveauClient .input-field input[type=text]:focus, #formulaireNouveauClient .input-field input[type=email]:focus, #formulaireNouveauClient .input-field input[type=password]:focus{
+    border-bottom: 1px solid midnightblue;
+    box-shadow: 0 1px 0 0 midnightblue;
+}
+.divPartenaireInscription{
+	display: inline-block;
+	width: 168px;
+	height: 100px;
+	margin-right: 13px;
+	margin-bottom: 13px;
+	cursor: pointer;
+	margin-right: 4px;
+}
+#divTelephone{
+	margin-top: 70px;
+	margin-left: 90px;
+	display: inline-block;
+	background-color: #BCBCBC;
+	border: 1px solid midnightblue;
+	width: 443px;
+	height: 500px;
+	padding: 5px 15px 5px 15px;
+}
+#imgTelephone{
+	display: inline-block;
+	background-image: url('../images/BODY/ESPACE CLIENT/telephone.png');
+	width: 207px;
+	height: 203px;
+}
+#adresseClient{
+	vertical-align: top;
+	display: inline-block;
+	width: 430px;
+	margin-left: 120px;
+}
+#identifiantMail{
+	margin: auto;
+	width: 990px;
+}
+.tailleInput{
+	padding-bottom: 10px;
+	width: 400px;
+}
+#droitePwd , #gauchePwd{
+	display: inline-block;
+}
+#droitePwd{
+margin-left: 170px;
+}
+#validerInscription{
+	display: block;
+	margin: auto;
+	margin-top: 40px;
+	border-radius: 5px;
+	border-style: none;
+	background: linear-gradient(180deg, rgb(163, 83, 0), rgb(172, 44, 9));
+	height: 45px;
+	width: 120px;
+	font-size: 20px;
+	color: white;
+	font-weight: bold;
+}

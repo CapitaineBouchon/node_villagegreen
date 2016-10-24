@@ -1,0 +1,154 @@
+.colorCheat{
+	background-color: #E7E7E7;
+}
+
+#infoHot{
+	display: inline-block;
+	margin-left: 30px;
+}
+#infoLivraison{
+	display: inline-block;
+	float: right;
+	margin-right: 30px;
+	cursor: pointer;
+	  transition-property: all;
+	  transition-duration: .2s; /* on aurait pu écrire 500ms également */
+	  transition-timing-function: ease-in;
+	  transition-delay: 0s;
+}
+#infoLivraison:hover{
+	opacity: 0.7;
+}
+#bandeInfo{
+	display: inline-block;
+	width: 1225px;
+	margin-top: 30px;
+}
+#titreCategorie{
+	color: midnightblue;
+	margin-left: 30px;
+}
+#divCat{
+	margin-left: 0px;
+	width: 1225px;
+}
+#divCat a{
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 306px;
+	height: 183px;
+	margin-bottom: -6px;
+	border: 0.5px solid #E7E7E7;
+}
+#firstCol{
+	margin-left: -11px;
+}
+#partenaires{
+	background-image: url('../images/BODY/partenaires 4 logos.png');
+	background-repeat: no-repeat;
+	width: 518px;
+	height: 304px;
+}
+
+#topVente h2{
+	color: midnightblue;
+}
+.divPartenaireHover{
+	display: inline-block;
+	width: 244px;
+	height: 145px;
+	margin-right: 13px;
+	margin-bottom: 13px;
+	cursor: pointer;
+}
+.ventDiv{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 50px;
+}
+#bestGuitare{
+	display: inline-block;
+	background-image: url('../images/BODY/TOP VENTES guitare.png');
+	width: 186px;
+	height: 304px;
+	cursor: pointer;
+}
+#bestSaxo{
+	display: inline-block;
+	background-image: url('../images/BODY/TOP VENTES saxo.png');
+	width: 186px;
+	height: 304px;
+	cursor: pointer;
+}
+#bestPiano{
+	display: inline-block;
+	background-image: url('../images/BODY/TOP VENTES piano.png');
+	width: 186px;
+	height: 304px;
+	cursor: pointer;
+}
+#plusDinfo{
+	display: inline-block;
+	position: absolute;
+	background-color: transparent;
+	border: 1px solid white;
+	height: auto;
+	margin-left: -850px;
+	margin-top: 20px;
+	font-size: 22px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#plusDinfo:hover{
+	background-color: rgba(231, 231, 231, 0.1);
+}
+#guitareCat{
+	background-image: url('../images/BODY/CATEGORIES guitare.png');
+}
+#sonoCat{
+	background-image: url('../images/BODY/CATEGORIES sono.png');
+}
+#batterieCat{
+	background-image: url('../images/BODY/CATEGORIES batterie.png');
+}
+#casesCat{
+	background-image: url('../images/BODY/CATEGORIES cases.png');
+}
+#pianoCat{
+	background-image: url('../images/BODY/CATEGORIES piano.png');
+}
+#cableCat{
+	background-image: url('../images/BODY/CATEGORIES cable.png');
+}
+#microCat{
+	background-image: url('../images/BODY/CATEGORIES micro.png');
+}
+#saxoCat{
+	background-image: url('../images/BODY/CATEGORIES saxo.png');
+}
+
+#guitareCat:hover{
+	background-image: url('../images/BODY/CATEGORIES ROLL OVER guitare.png');
+}
+#sonoCat:hover{
+	background-image: url('../images/BODY/CATEGORIES ROLL OVER sono.png');
+}
+#batterieCat:hover{
+	background-image: url('../images/BODY/CATEGORIES ROLL OVER batterie.png');
+}
+#casesCat:hover{
+	background-image: url('../images/BODY/CATEGORIES ROLL OVER cases.png');
+}
+#pianoCat:hover{
+	background-image: url('../images/BODY/CATEGORIES ROLL OVER piano.png');
+}
+#cableCat:hover{
+	background-image: url('../images/BODY/CATEGORIES ROLL OVER cable.png');
+}
+#microCat:hover{
+	background-image: url('../images/BODY/CATEGORIES ROLL OVER micro.png');
+}
+#saxoCat:hover{
+	background-image: url('../images/BODY/CATEGORIES ROLL OVER saxo.png');
+}

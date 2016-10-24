@@ -15,7 +15,6 @@ $(document).ready(function(){
 	$("#superDiv").hide();
 	$("#menu_client").click(function(){
 		event.stopPropagation();
-		$("#email").select();
 		$("#email").val("");
 		$("#password").val("");
 		var liste = $('.modal-cat');
@@ -32,7 +31,6 @@ $(document).ready(function(){
 			testBool = true;
 			
 		}
-		console.log(testBool);
 	});
 
 	$("#superDiv").click(function(){

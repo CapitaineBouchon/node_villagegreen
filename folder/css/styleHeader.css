@@ -20,24 +20,30 @@ a:visited{
 }
 
 #bande_milieu{
-	background-image: url("../images/BACKGROUND/bande_milieu.png");
-	background-repeat: no-repeat;
+	background-color: #E7E7E7;
 	width: 1225px;
 	height: auto;
 	margin: auto;
-	padding: 15px 0px 0px 20px;
+	margin-top: 15px;
+	padding-bottom: 30px;
+	border-radius: 5px;
 }
 
 #menu_accueil{
 	background-image: url("../images/HEADER/3_bandes.png");
 	background-repeat: no-repeat;
-	width: 1225px;
+	background-size: cover;
+	width: 100%;
 	height: 163px;
-	background-color: none;
+	margin-bottom: 30px;
+	margin-left: 1px;
 }
 #logo_accueil{
 	display: inline-block;
 	float: top-left;
+	border-radius: 5px;
+	cursor: pointer;
+	z-index: 501;
 }
 
 #picto_pays{
@@ -131,7 +137,7 @@ a:visited{
 	width: 535px;
 	height: 300px;
 	padding: 0px 20px 10px 20px;
-	margin-top: -135px ;
+	margin-top: -165px ;
 	margin-left: 550px;
 	z-index: 501;
 }
@@ -176,6 +182,10 @@ a:visited{
 	background-color: #bdbdbd;
 	border-radius: 8px;
 	height: 30px;
+}
+#modal_client input[type=email]:focus, #modal_client input[type=password]:focus{
+    border-bottom: 1px solid #e65100 ;
+    box-shadow: 0 1px 0 0 #e65100 ;
 }
 #modal_client input::-webkit-input-placeholder {
     color:white;
@@ -231,7 +241,7 @@ a:visited{
 	height: 316px;
 	padding: 20px 30px 20px 30px;
 	position: absolute;
-	margin-top: -20px;
+	margin-top: -50px;
 	z-index: 501;
 }
 
@@ -283,4 +293,9 @@ a:visited{
 
 #accessoires{
 	margin-left: 975px;
+}
+
+#ajaxContent{
+	padding: 15px 0px 0px 0px;
+	width: 99%;
 }

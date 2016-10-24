@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VillageGreen</title>
+  <script src="js/jquery-min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.js"></script>
+  <script src="js/controller.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="css/materialize.min.css" />
+  <script src="js/materialize.min.js"></script>
+  <script src="js/scriptHeader.js"></script>
+  <script src="js/scriptFooter.js"></script>
+  <script src="js/accueil.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/navigationCtrl.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/styleHeader.css" />
+  <link rel="stylesheet" type="text/css" href="css/styleFooter.css" />
+  <link rel="stylesheet" type="text/css" href="css/styleAutres.css" />
+  <link rel="stylesheet" type="text/css" href="css/styleAccueil.css" />
+  <link rel="stylesheet" type="text/css" href="css/hover.css" />
+  <link rel="stylesheet" type="text/css" href="css/styleInscription.css" />
+</head>
+<body ng-app="myApp" ng-controller="navigationCtrl">
+<div id="superDiv"></div>
+  <div id="bande_milieu" class="z-depth-5">
+    <div id="menu_accueil">
+      <img id="logo_accueil" src="images/HEADER/logo_village_green.png" ng-click="afficheAccueil()"/>
+      <div class="menu" id="menu_un">
+        <div id="menu_info" class="btn_menu"><a href="#"><b>Infos</b></a></div>
+        <div id="menu_client" class="btn_menu"><b>Espace Client</b></div>
+        <img id="picto_panier" src="images/HEADER/picto_panier.png">
+        <img id="picto_pays" src="images/HEADER/picto_pays.png">
+      </div>
+      <div class="menu" id="menu_deux">
+        <span class="menu_deux_item">Produits</span>
+        <span class="menu_deux_item">Service</span>
+        <span class="menu_deux_item">Aide</span>
+        <span class="menu_deux_item">A propos</span>    
+      </div>
+      <div class="menu" id="menu_trois">
+        <span class="menu_trois_item" data-id="guitare">Guit/Bass</span>
+        <span class="menu_trois_item" data-id="batterie">Batteries</span>
+        <span class="menu_trois_item" data-id="clavier">Clavier</span>
+        <span class="menu_trois_item" data-id="studio">Studio</span>
+        <span class="menu_trois_item" data-id="sono">Sono</span>
+        <span class="menu_trois_item" data-id="eclairage">Eclairage</span>
+        <span class="menu_trois_item" data-id="dj">DJ</span>
+        <span class="menu_trois_item" data-id="cases">Cases</span>
+        <span class="menu_trois_item" data-id="accessoires">Accessoires</span>
+      </div>
+    </div>
+
+    <div id="modal_client" hidden="hidden">
+      <div id="client_gauche" class="petit_client">
+        <span><b>Etes-vous déjà client chez nous ?</b></span>
+        <form>
+        </br>
+          <input id="email" type="email" class="validate" placeholder="Adresse E-mail" autofocus>
+          <input id="password" type="password" class="validate" placeholder="Mot de passe">
+          <div class="switch">
+              <label>
+                <input type="checkbox" value="oui">
+                <span class="lever"></span>
+              </label>Rester connecté
+          </div>
+          <button class="transparent waves-effect waves-light" id="log_in"></button>
+        </form>
+          <a href="#"><b>Vous avez oublié votre mot de passe ?</b></a>
+      </div>
+      <div id="separateur"></div>
+      <div id="client_droit" class="petit_client">
+        <span id="pasClientTitre"><b>N'êtes-vous pas encore client ?</b></span>
+        <span id="pasClientText"><br>En tant que client Village Green vous pouvez suivre vos envoies, les des tests produits exclusifs,
+        évaluer des produits, déposer des petites annonces, gérer vos chèques-cadeaux, devenir partenaire et
+        bien plus encore.</span>
+        <a class="transparent waves-effect waves-light" id="newClient"></a>
+        <a id="lienPlusDinfo" href="#"><b>Plus d'informations</b></a>
+      </div>
+    </div>
+
+    <div class="modal-cat" id="guitare" hidden="hidden">
+      <ul class="liste">
+        <li class="detailMenuCat"><a href="#">Guitares Electriques</a></li>
+        <li class="detailMenuCat"><a href="#">Guitares Classiques</a></li>
+        <li class="detailMenuCat"><a href="#">Guitares Acoustiques & Electro-Acoustique</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Electriques</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Acoustiques</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Semi-Acoustiques</a></li>
+        <li class="detailMenuCat"><a href="#">Ukulélés</a></li>
+        <li class="detailMenuCat"><a href="#">Autres instruments à cordes pincées</a></li>
+      </ul>
+    </div>
+
+    <div class="modal-cat" id="batterie" hidden="hidden">
+      <ul class="liste">
+        <li class="detailMenuCat"><a href="#">Guitares Electriques</a></li>
+        <li class="detailMenuCat"><a href="#">Guitares Classiques</a></li>
+        <li class="detailMenuCat"><a href="#">Guitares Acoustiques & Electro-Acoustique</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Electriques</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Acoustiques</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Semi-Acoustiques</a></li>
+        <li class="detailMenuCat"><a href="#">Ukulélés</a></li>
+        <li class="detailMenuCat"><a href="#">Autres instruments à cordes pincées</a></li>
+      </ul>
+    </div>
+
+    <div class="modal-cat" id="clavier" hidden="hidden">
+      <ul class="liste">
+        <li class="detailMenuCat"><a href="#">Guitares Electriques</a></li>
+        <li class="detailMenuCat"><a href="#">Guitares Classiques</a></li>
+        <li class="detailMenuCat"><a href="#">Guitares Acoustiques & Electro-Acoustique</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Electriques</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Acoustiques</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Semi-Acoustiques</a></li>
+        <li class="detailMenuCat"><a href="#">Ukulélés</a></li>
+        <li class="detailMenuCat"><a href="#">Autres instruments à cordes pincées</a></li>
+      </ul>
+    </div>
+
+    <div class="modal-cat" id="studio" hidden="hidden">
+      <ul class="liste">
+        <li class="detailMenuCat"><a href="#">Guitares Electriques</a></li>
+        <li class="detailMenuCat"><a href="#">Guitares Classiques</a></li>
+        <li class="detailMenuCat"><a href="#">Guitares Acoustiques & Electro-Acoustique</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Electriques</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Acoustiques</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Semi-Acoustiques</a></li>
+        <li class="detailMenuCat"><a href="#">Ukulélés</a></li>
+        <li class="detailMenuCat"><a href="#">Autres instruments à cordes pincées</a></li>
+      </ul>
+    </div>
+
+    <div class="modal-cat" id="sono" hidden="hidden">
+      <ul class="liste">
+        <li class="detailMenuCat"><a href="#">Guitares Electriques</a></li>
+        <li class="detailMenuCat"><a href="#">Guitares Classiques</a></li>
+        <li class="detailMenuCat"><a href="#">Guitares Acoustiques & Electro-Acoustique</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Electriques</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Acoustiques</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Semi-Acoustiques</a></li>
+        <li class="detailMenuCat"><a href="#">Ukulélés</a></li>
+        <li class="detailMenuCat"><a href="#">Autres instruments à cordes pincées</a></li>
+      </ul>
+    </div>
+
+    <div class="modal-cat" id="eclairage" hidden="hidden">
+      <ul class="liste">
+        <li class="detailMenuCat"><a href="#">Guitares Electriques</a></li>
+        <li class="detailMenuCat"><a href="#">Guitares Classiques</a></li>
+        <li class="detailMenuCat"><a href="#">Guitares Acoustiques & Electro-Acoustique</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Electriques</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Acoustiques</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Semi-Acoustiques</a></li>
+        <li class="detailMenuCat"><a href="#">Ukulélés</a></li>
+        <li class="detailMenuCat"><a href="#">Autres instruments à cordes pincées</a></li>
+      </ul>
+    </div>
+
+    <div class="modal-cat" id="dj" hidden="hidden">
+      <ul class="liste">
+        <li class="detailMenuCat"><a href="#">Guitares Electriques</a></li>
+        <li class="detailMenuCat"><a href="#">Guitares Classiques</a></li>
+        <li class="detailMenuCat"><a href="#">Guitares Acoustiques & Electro-Acoustique</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Electriques</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Acoustiques</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Semi-Acoustiques</a></li>
+        <li class="detailMenuCat"><a href="#">Ukulélés</a></li>
+        <li class="detailMenuCat"><a href="#">Autres instruments à cordes pincées</a></li>
+      </ul>
+    </div>
+
+    <div class="modal-cat" id="cases" hidden="hidden">
+      <ul class="liste">
+        <li class="detailMenuCat"><a href="#">Guitares Electriques</a></li>
+        <li class="detailMenuCat"><a href="#">Guitares Classiques</a></li>
+        <li class="detailMenuCat"><a href="#">Guitares Acoustiques & Electro-Acoustique</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Electriques</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Acoustiques</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Semi-Acoustiques</a></li>
+        <li class="detailMenuCat"><a href="#">Ukulélés</a></li>
+        <li class="detailMenuCat"><a href="#">Autres instruments à cordes pincées</a></li>
+      </ul>
+    </div>
+
+    <div class="modal-cat" id="accessoires"  hidden="hidden">
+      <ul class="liste">
+        <li class="detailMenuCat"><a href="#">Guitares Electriques</a></li>
+        <li class="detailMenuCat"><a href="#">Guitares Classiques</a></li>
+        <li class="detailMenuCat"><a href="#">Guitares Acoustiques & Electro-Acoustique</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Electriques</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Acoustiques</a></li>
+        <li class="detailMenuCat"><a href="#">Basses Semi-Acoustiques</a></li>
+        <li class="detailMenuCat"><a href="#">Ukulélés</a></li>
+        <li class="detailMenuCat"><a href="#">Autres instruments à cordes pincées</a></li>
+      </ul>
+    </div>
+
+
+
+    <div id="ajaxContent" ajax-modal>
+      
+    </div>
+
+
+
+  </div><!-- fin de la div  bande_milieu-->
+
+  <div id="piedPage" class="z-depth-5">
+    <div id="newslettermail">
+      <div class="white-text"><b>Recevez <span class="couleurTxtOrange">nos offres exclusives</span></b></div>
+      <form class="input-field" id="newsletter">
+        <input id="newsemail" type="email" name="newsmail" placeholder="Votre adresse e-mail">
+      </form>
+      <button class="waves-effect waves-light newsletterValider" id="newsletterValider">Valider</button>
+    </div>
+
+    <div id="lienContact">
+      <b class="white-text"><span class="couleurTxtOrange">Suivez-nous</span> par ici !</b>
+      <br />
+      <a id="lien_fb" href="https://www.facebook.com/"></a>
+      <a id="lien_tw" href="https://twitter.com/?lang=fr"></a>
+    </div>
+
+    <div id="logoPiedPage"></div>
+
+    <div id="txtFooter" class="row">
+      <div class="col s3">
+        <span class="grandTxt">Contactez-nous !</span>
+        <br /><br />
+        <span class="moyenTxt">Conseil / Commande téléphone</span>
+        <br />
+        <span class="petitTxt">du lundi au vendredi de 8h à 19h, le samedi de 10h à 18h.
+        <br /><br />
+        Depuis la France :
+        </span>
+        <br />
+        <span class="grandTxt">02 40 38 50 50</span>
+        <br /><br />
+        <span class="petitTxt">Belgique, Suisse, International :</span>
+        <br />
+        <span class="grandTxt">0033 2 40 38 50 50</span>
+        <br /><br />
+        <span class="moyenTxt">Service après vente :</span>
+        <br />
+        <span class="grandTxt">02 51 80 68 76</span>
+        <br />
+        <span class="petitTxt">Contactez-nous par téléphone du lundi au samedi de 9h à 18h ou depuis votre compte client.</span>
+        <br /><br />
+        <span class="moyenTxt">Conseils pour choisir un instrument :</span>
+        <br />
+        <span class="petitTxt">infovg@villagegreen.com</span>
+        <br /><br />
+        <span class="moyenTxt">Service Presse :</span>
+        <br />
+        <span class="petitTxt">contact@villagegreen.com</span>
+        <br /><br />
+        <span class="moyenTxt">Village Green Recrute !</span>
+      </div>
+      <div class="col s3">
+        <span class="grandTxt">Village Green Stores</span>
+        <br /><br />
+        <span class="moyenTxt">Ouverts de 10h à 19h30 <br />non-stop.</span>
+        <br /><br />
+        <span class="petitTxt">
+          Guitares - Amplificateur - Effets :<br/>
+          <i>182 avenue jean Jaurès<br/>
+          75019 Paris</i>
+          <br/><br/>
+          Clavier - Home Studio - Sonorisation Equipement DJ - Eclairage :
+          <i>184 avenue Jean Jaurès<br/>
+          75019 Paris</i>
+          <br/><br/>
+          Librairie Musicale :<br/>
+          <i>7 av. du Nouveau Conservatoire<br/>
+          75019 Paris</i>
+          <br/><br/>
+          Instruments à vent :<br/>
+          <i>9/11 av. du Nouveau Conservatoire<br/>
+          75019 Paris</i>
+          <br/><br/>
+          Percussions :<br/>
+          <i>13/15 av. du Nouveau Conservatoire<br/>
+          75019 Paris</i>
+          <br/><br/>
+          Métro Ligne 5, station Porte de Pantin.
+          <br/><br/>
+          Plan d'accès / Visite virtuelle
+        </span>
+      </div>  
+      <div class="col s3">
+        <span class="grandTxt">Utiles !</span>
+        <br /><br />
+        <span class="petitTxt">
+          <a href="">Qui sommes-nous ?</a><br/><br/>
+          <a href="">F.A.Q.</a><br/><br/>
+          <a href="">Le blog Village Green</a><br/><br/>
+          <a href="">Vous avez un site Internet ?<br/>
+          Devenez partenaire Village Green</a><br/><br/>
+          <a href="">Conditions générales de vente</a><br/><br/>
+          <a href="">Mentions légales</a><br/><br/>
+          <a href="">Plan du site</a><br/><br/>
+          <a href="">Parrainage</a><br/><br/>
+          <a href="">Nouveautés</a><br/><br/>
+          <a href="">Assurance Woodbrass.com</a><br/><br/>
+          <a href="">Location d'instruments de musique</a>
+        </span>
+      </div>  
+      <div class="col s3">
+        <span class="grandTxt">Village Green Preservation Society</span>
+        <br /><br />
+        <span class="petitTxt">
+          <a href="">Toute l'actualité musicale</a><br/><br/>
+          <a href="">Voir l'avis des musiciens</a><br/><br/>
+          <a href="">Concours : inscription et résultat... à vous de jouer !</a>
+        </span>
+      </div>    
+    </div><!-- fin de la div txtFooter-->
+    <div id="txtFooterReclam">
+      <span class="petitTxt">Village Green est une entreprise 100% Made in France !<br/>
+      Magasin de musique - Achat / Vente instruments de musique - Location instruments de musique - Atelier de réparation - Vente accessoires de musique au meilleur prix.<br/>
+      1989-2016 - RCS Paris B 222 333 444 Déclaration CNIL : 12345678.</span>
+    </div>
+    <div id="blackFooter">
+      <div id="catalogueFooter">Guitares - Amplis / Effets - Claviers / Pianos - Synthés - Batteries / Percussions - Vents - Violons - Home Studio - Sonorisation - Deejay - Éclairage - Micros - Casques - Enregistreurs - Lifestyle - Déstockage - Ecoles & Pros</div>
+      <div id="lienExterne">Behringer - Bose - Conservatoire de musique de Paris - Fender - Focusrite Scarlett - Focusrite - Gibson 2016 - Gibson - Guitar Shop - Guitare Martin - Guitare Taylor - Guitare classique - Guitare folk - Guitare électrique
+      IK Multimedia - Luthier Paris - Magasin DJ Paris - Magasin instruments de musique Paris - Magasin sonorisation Paris - Microphone USB - Musique - Namm - Partition alto - Partition clarinette - Partition flute - Partition guitare
+      Partition harmonica - Partition musique - Partition piano - Partition saxophone - Partition trombone - Partition trompette - Partition vibraphone - Partition violon - Partition xylophone - Piano pas cher - Pioneer DJ - Platine vinyle
+       Site internet DJ - Site internet Deejay - Site internet Violon - Sono Behringer - Tablature guitare - Tablatures - Ukulele - Vente sono - Yamaha RS - batterie débutant</div>
+    </div>
+  </div><!-- fin de la div  piedPage-->
+</body>
+</html>

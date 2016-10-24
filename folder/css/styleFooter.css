@@ -1,0 +1,151 @@
+#piedPage{
+	background-repeat: no-repeat;
+	background-image: url('../images/FOOTER/bgfooter.png');
+	background-attachment: fixed;
+	background-size: cover;
+	width: 1225px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px 5px 0px 35px;
+	border-radius: 5px;
+}
+
+.couleurTxtOrange{
+	color: #e65100;
+	opacity: 0.8;
+}
+#newslettermail div{
+	font-size: 20px;
+	
+}
+#newsletter{
+	margin-top: 5px;
+	display: inline-block;
+}
+
+#newslettermail{
+	display: inline-block;
+	margin-top: 3px;
+	padding-top: 10px;
+	vertical-align: top;
+}
+
+#lienContact{
+	font-size: 20px;
+	display: inline-block;
+	margin-top: 3px;
+	padding-top: 10px;
+	vertical-align: top;
+	margin-left: 50px;
+}
+
+#newsletterValider{
+	display: inline-block;
+	border-radius: 5px;
+	border-style: none;
+	background: linear-gradient(180deg, rgb(163, 83, 0), rgb(172, 44, 9));
+	height: 35px;
+	width: 91px;
+	color: white;
+	font-weight: bold;
+	margin-left: 3px;
+}
+
+#newsemail{
+	background-color: white;
+	border-radius: 8px;
+	height: 35px;
+	width: 300px;
+}
+#newsemail::-webkit-input-placeholder {
+    color: #bdbdbd;
+    padding-left: 5px;
+    font-style: italic;
+}
+
+#toast-container {
+  top: 5%;
+  right: auto !important;
+  bottom: auto !important;
+  left:40%;  
+}
+
+
+
+#lien_fb{
+	display: inline-block;
+	background-image: url('../images/FOOTER/picto facebook.png');
+	width: 27px;
+	height: 27px;
+	margin-left: 50px;
+	margin-top: 10px;
+}
+
+#lien_tw{
+	display: inline-block;
+	background-image: url('../images/FOOTER/picto twitter.png');
+	width: 40px;
+	height: 28px;
+	margin-left: 26px;
+	margin-top: 10px;
+}
+
+#logoPiedPage{
+	margin-top: 20px;
+	margin-left: 50px;
+	display: inline-block;
+	height: 66px;
+	width: 454px;
+	background-image: url('../images/FOOTER/pictos_paiement.png');
+}
+.petitTxt, #lienExterne{
+	color: white;
+	font-size: 13px;
+	opacity: 0.8;
+
+}
+.moyenTxt{
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+}
+.grandTxt{
+	color: white;
+	font-weight: bold;
+	font-size: 24px;
+}
+#txtFooter{
+	margin-top: 20px;
+}
+#txtFooter a{
+	color: white;
+}
+#txtFooterReclam{
+	width: 980px;
+	margin: auto;
+	line-height: 10pt;
+	text-align: center;
+}
+#blackFooter{
+	background-color: black;
+	color: white;
+	width: 1225px;
+	font-size: 12px;
+	padding: 10px 3px 10px 3px;
+	margin-top: 10px;
+	margin-left: -35px;
+	border-radius: 0px 0px 5px 5px;
+}
+#lienExterne{
+	margin-top: 10px;
+	text-align: center;
+	padding: 0px 5px 0px 5px;
+}
+#catalogueFooter{
+	padding-left: 30px;
+}
+#piedPage input[type=email]:focus{
+    border-bottom: 1px solid #e65100 ;
+    box-shadow: 0 1px 0 0 #e65100 ;
+}
