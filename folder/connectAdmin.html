@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>Connexion Service</title>
+  <script src="js/module/angular.min.js"></script>
+  <script src="js/module/angular-route.js"></script>
+  <script src="js/module/jquery-min.js"></script>
+  <script src="js/module/materialize.min.js"></script>
+  <script src="js/module/angular-cookies.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/materialize.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/hover.css" />
+
+  <script src="js/adminCtrl.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/adminConnectStyle.css">
+
+
+</head>
+<body ng-app="connectApp">
+	<div id="connexionAdmin" ng-controller="loginCtrl" class="z-depth-5">
+	  	<img id="logoVG" src="images/HEADER/logo_village_green.png"/>
+	  	<span>Connexion</span>
+			<form>
+				<div class="input-field">
+				    <input id="loginAdmin" type="text" ng-model="adminData.login_connexion">
+				    <label for="loginAdmin">Identifiant</label>
+				</div>
+				<div class="input-field">
+				    <input id="pwdLogin" type="password" ng-model="adminData.mdp_connexion">
+				    <label for="pwdLogin">Mot de passe</label>
+				</div>
+			</form>
+			<a id="connectAdmin" class="waves-effect waves-light btn" ng-click="logAdmin(adminData)">Connexion</a>
+	</div>
+</body>
+</html>

@@ -64,11 +64,11 @@
     font-style: italic;
 }
 
-#toast-container {
-  top: 5%;
-  right: auto !important;
-  bottom: auto !important;
-  left:40%;  
+#toast-container .toastnewsletter{
+	display: inline-block;
+	top: 55%;
+	left: auto !important;
+	width: auto !important;
 }
 
 
@@ -145,7 +145,7 @@
 #catalogueFooter{
 	padding-left: 30px;
 }
-#piedPage input[type=email]:focus{
+#piedPage input[type=text]:focus{
     border-bottom: 1px solid #e65100 ;
     box-shadow: 0 1px 0 0 #e65100 ;
 }

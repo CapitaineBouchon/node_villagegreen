@@ -2,6 +2,7 @@
 	width: 1225px;
 	z-index: 1;
 }
+
 #nouveauClient h3{
 	color: midnightblue;
 	text-align: center;
@@ -86,7 +87,17 @@
 	margin: auto;
 	width: 990px;
 }
+#identifiantMail i{
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 25px;
+}
+#passGauche{
+	display: inline-block;
+	width: 430px;
+}
 .tailleInput{
+	display: inline-block;
 	padding-bottom: 10px;
 	width: 400px;
 }
@@ -94,7 +105,8 @@
 	display: inline-block;
 }
 #droitePwd{
-margin-left: 170px;
+	position: absolute;
+	margin-left: 110px;
 }
 #validerInscription{
 	display: block;
@@ -108,4 +120,25 @@ margin-left: 170px;
 	font-size: 20px;
 	color: white;
 	font-weight: bold;
+}
+#champObligatoire {
+	display: inline-block;
+	position: absolute;
+	margin-left: 520px;
+	margin-top: -50px;
+	font-size: 16px;
+}
+
+
+
+.checkValide input[type=text], .checkValide input[type=email], .checkValide input[type=password]{
+    border-bottom: 1px solid limegreen;
+    box-shadow: 0 1px 0 0 limegreen;
+}
+
+
+
+.checkInvalide input[type=text], .checkInvalide input[type=email], .checkInvalide input[type=password]{
+    border-bottom: 1px solid red;
+    box-shadow: 0 1px 0 0 red;
 }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VillageGreen Administration</title>
+  <script src="js/module/angular.min.js"></script>
+  <script src="js/module/angular-route.js"></script>
+  <script src="js/module/jquery-min.js"></script>
+  <script src="js/module/materialize.min.js"></script>
+  <script src="js/module/angular-cookies.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/materialize.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/hover.css" />
+
+  <link rel="stylesheet" type="text/css" href="css/vgStyle.css" />
+  <script src="js/villagegreenCtrl.js"></script>
+</head>
+<body ng-app="adminApp" ng-controller="fonctionCtrl">
+<nav>
+    <div class="nav-wrapper">
+      <a ng-click='deconnexion()' class="brand-logo right btn-flat">Deconnexion</a>
+      <ul id="nav-mobile" class="middle hide-on-med-and-down">
+        <li><a ng-click="listClient()">Liste Client</a></li>
+        <li><a ng-click="dropCommandes()">Liste Commande</a></li>
+        <li><a ng-click="dropInterro()">Interrogations</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+<div id="pageVG" class="z-depth-5">
+    <div ng-show="messageAccueil">
+      <h3>Bienvenue sur l'interface de gestion de village Green !</h3>
+    </div>
+    <div ng-show="div1visible">
+      <a id="ajoutclient" class="waves-effect waves-light btn" ng-click="ajouterClient()">Ajouter un client</a>
+        <table class="striped">
+          <tr>
+            <th>
+              Nom
+            </th>
+            <th colspan="2">
+              Adresse
+            </th>
+          </tr>
+          <tr ng-repeat="cli in list_client">
+            <td>{{cli.nom_client}}</td>
+            <td>{{cli.adresse_client + " " + cli.code_postal_client + " " + cli.ville_client}}</td>
+            <td><button class="waves-effect waves-teal btn-flat" ng-click="afficheDetails(cli.code_client)">Détails</button></td> 
+          </tr>    
+        </table>
+    </div>
+
+    <div id="formuCli" ng-show="detailClient">
+      <form>
+        <table>
+          <tr>
+            <th><label>Nom</label></th>
+            <td><input type="text" name="nom_client" ng-model='affiche.nom_client' /></td>
+          </tr>
+          <tr>
+            <th><label>Prenom</label></th>
+            <td><input type="text" name="prenom_client" ng-model="affiche.prenom_client" /></td>
+          </tr>
+          <tr>
+            <th><label>Adresse</label></th>
+            <td><input type="text" name="adresse_client" ng-model="affiche.adresse_client" /></td>
+          </tr>
+          <tr>
+            <th><label>Code Postal</label></th>
+            <td><input type="text" name="code_postal_client" ng-model="affiche.code_postal_client" /></td>
+          </tr>
+          <tr>
+            <th><label>Ville</label></th>
+            <td><input type="text" name="ville_client" ng-model="affiche.ville_client" /></td>
+          </tr>
+          <tr>
+            <th><label>Telephone</label></th>
+            <td><input type="text" name="telephone_client" ng-model="affiche.telephone_client" /></td>
+          </tr>
+          <tr>
+            <th><label>Portable</label></th>
+            <td><input type="text" name="portable_client" ng-model="affiche.portable_client" /></td>
+          </tr>
+          <tr>
+            <th><label>E-Mail</label></th>
+            <td><input type="text" name="mail_client" ng-model="affiche.mail_client" /></td>
+          </tr>
+        </table>
+        <input type="hidden" name="actif_client" ng-model="affiche.actif_client" value="true">
+      </form>
+      <button class="waves-effect waves-light btn" ng-click='retour()'>Retour</button>
+      <span ng-show="btnDetails">
+        <button class="waves-effect waves-light btn" ng-click="update(affiche)">Modifier</button>
+        <button class="waves-effect waves-light btn" ng-click="delete(affiche.code_client)">Supprimer</button>
+      </span>
+      <span ng-hide="btnDetails">
+        <button class="waves-effect waves-light btn" ng-click="nouvelAjout(affiche)">Ajouter</button>
+      </span>
+    </div>
+</div>  
+</body>
+</html>

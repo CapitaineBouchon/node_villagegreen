@@ -1,72 +1,91 @@
-<div id="nouveauClient">
+<div id="nouveauClient" ng-controller="ajoutClient">
 <div id="formulaireNouveauClient">
 	<h3>Créez vos identifiants</h3>
+	<span id="champObligatoire" class="red-text center-align">* Champs obligatoires</span>
 	<form id="formulaireInscriptionClient">
 		<div id="identifiantMail">
 		    <div class="input-field tailleInput">
-		      	<input id="mail" type="email" class="validate">
+		      	<input id="mail" type="email" class="" ng-model="client.mail_client">
 		      	<label for="mail">E-mail</label>
 		    </div>
-		    <div class="input-field tailleInput" id="gauchePwd">
-		      <input id="pwdUn" type="password" class="validate">
-		      <label for="pwdUn">Créez votre mot de passe</label>
+		    <span class="red-text">*</span>
+		    <br/>
+		    <div id="passGauche">
+			    <div class="input-field tailleInput" id="gauchePwd">
+			      <input id="pwdUn" type="password" class="" ng-model="client.pwdUn">
+			      <label for="pwdUn">Créez votre mot de passe</label>
+			    </div>
+			    <i class="material-icons tooltipped" data-position="bottom" data-delay="10" data-tooltip="Mot de passe valide" ng-show="validatePwd(client.pwdUn, client.pwdDeux)" >done_all</i>
+			    <i class="material-icons tooltipped" data-position="bottom" data-delay="10" data-tooltip="Mot de passe invalide" ng-show="!validatePwd(client.pwdUn, client.pwdDeux)" >error_outline</i>
 		    </div>
 		    <div class="input-field tailleInput" id="droitePwd">
-		      <input id="pwdDeux" type="password" class="validate">
+		      <input id="pwdDeux" type="password" class="" ng-model="client.pwdDeux">
 		      <label for="pwdDeux">Confirmation du mot de passe</label>
 		    </div>
 	    </div>
 	    <h3>Indiquez vos coordonées</h3>
 	    <div id="adresseClient">
 		    <div class="input-field tailleInput">
-		      <input id="prenom" type="text" class="validate">
+		      <input id="prenom" type="text" class="" ng-model="client.prenom_client">
 		      <label for="prenom">Prénom</label>
 		    </div>
+		    <span class="red-text">*</span>
+
 		    <div class="input-field tailleInput">
-		      <input id="nom" type="text" class="validate">
+		      <input id="nom" type="text" class="" ng-model="client.nom_client">
 		      <label for="nom">Nom</label>
 		    </div>
+		    <span class="red-text">*</span>
+
 		    <div class="input-field tailleInput">
-		      <input id="adresse" type="text" class="validate">
+		      <input id="adresse" type="text" class="" ng-model="client.adresse_client">
 		      <label for="adresse">Adresse</label>
 		    </div>
+		    <span class="red-text">*</span>
+
 		    <div class="input-field tailleInput">
-		      <input id="complementAdresse" type="text" class="validate">
+		      <input id="complementAdresse" type="text" class="" ng-model="client.complement_client">
 		      <label for="complementAdresse">Complément d'adresse</label>
 		    </div>
+
 		    <div class="input-field tailleInput">
-		      <input id="codePostal" type="text" class="validate">
+		      <input id="codePostal" type="text" class="" ng-model="client.code_postal_client">
 		      <label for="codePostal">Code Postal</label>
 		    </div>
+		    <span class="red-text">*</span>
+
 		    <div class="input-field tailleInput">
-		      <input id="ville" type="text" class="validate">
+		      <input id="ville" type="text" class="" ng-model="client.ville_client">
 		      <label for="ville">Ville</label>
 		    </div>
+		    <span class="red-text">*</span>
+
 		    <div class="input-field tailleInput">
-		      <input id="pays" type="text" class="validate">
+		      <input id="pays" type="text" class="" ng-model="client.pays_client">
 		      <label for="pays">Pays</label>
 		    </div>
+
 		</div>
 	    <div id="divTelephone">
 	    	<h4>Vos numéros de téléphone</h4>
 	    	<div class="input-field">
-		      <input id="portable" type="text" class="validate">
+		      <input id="portable" type="text" class="" ng-model="client.telephone_client">
 		      <label for="portable">Numéro de Portable</label>
 		    </div>
 		    <div class="input-field">
-		      <input id="fixe" type="text" class="validate">
+		      <input id="fixe" type="text" class="" ng-model="client.portable_client">
 		      <label for="fixe">Numéro de téléphone fixe</label>
 		    </div>
 		    <div id="imgTelephone"></div>
 		    <div id="commandeSMS">Suivez vos commandes par SMS</div>
 	    </div>
     </form>
-    <button id="validerInscription" class="waves-effect waves-light">Valider</button>
+    <button id="validerInscription" class="waves-effect waves-light" ng-click="validationFormNewClient(client)">Valider</button>
 </div>
 	<div id="pictoBasPage">
-		<div id="roland" class="divPartenaireInscription hvr-shutter-in-vertical"></div>
-		<div id="sennheiser" class="divPartenaireInscription hvr-shutter-in-vertical"></div>
-		<div id="yamaha" class="divPartenaireInscription hvr-shutter-in-vertical"></div>
-		<div id="behringer" class="divPartenaireInscription hvr-shutter-in-vertical"></div>
+		<div id="roland" class="divPartenaireInscription hvr-shutter-in-vertical" ng-click="redirect('http://fr.rolandce.com/')"></div>
+		<div id="sennheiser" class="divPartenaireInscription hvr-shutter-in-vertical" ng-click="redirect('https://fr-fr.sennheiser.com/')"></div>
+		<div id="yamaha" class="divPartenaireInscription hvr-shutter-in-vertical" ng-click="redirect('http://fr.yamaha.com/')"></div>
+		<div id="behringer" class="divPartenaireInscription hvr-shutter-in-vertical" ng-click="redirect('https://www.music-group.com/brand/behringer/home')"></div>
 	</div>
 </div>

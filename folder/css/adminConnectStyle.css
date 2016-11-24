@@ -1,0 +1,56 @@
+html{
+   height: 100%;
+}
+body{
+	background: linear-gradient(to bottom right, midnightblue, white);
+}
+#connectAdmin{
+	display: inline-block;
+	border-radius: 5px;
+	border-style: none;
+	background: linear-gradient(180deg, rgba(25, 25, 115, 0.9), rgba(46, 46, 255, 0.8));
+	height: 35px;
+	width: 150px;
+	color: white;
+	font-weight: bold;
+	margin-left: 230px;
+}
+form{
+	padding: 20px 100px 40px 100px;
+}
+#connexionAdmin{
+	border-radius: 10px;
+	background-color: #E7E7E7;
+	width: 700px;
+	margin: auto;
+	margin-top: 70px;
+	padding: 20px 40px 20px 40px;
+}
+#logoVG{
+	display: inline-block;
+	float: top-left;
+	border-radius: 5px;
+	border-bottom-right-radius: 157px;
+	z-index: 501;
+}
+span{
+	vertical-align: top;
+	display: inline-block;
+	font-size: 40px;
+	font-weight: bold;
+	padding: 80px 20px 20px 30px;
+	color: midnightblue;
+}
+.input-field label {
+	color: midnightblue;
+	padding-bottom: 5px;
+	font-size: 16px;
+	margin-left: 5px;
+}
+.input-field input[type=text]:focus + label, .input-field input[type=password]:focus + label{
+     color: midnightblue;
+}
+.input-field input[type=text]:focus, .input-field input[type=password]:focus{
+    border-bottom: 1px solid midnightblue;
+    box-shadow: 0 1px 0 0 midnightblue;
+}
